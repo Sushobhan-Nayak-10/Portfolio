@@ -1,0 +1,283 @@
+.bg-black{
+    background-color: #010109 !important;
+}
+.bg-dark{
+    background-color: #000011 !important;
+}
+.table-dark{
+    color: #000011 !important;
+}
+.intro-card{
+    margin-top: 100px;
+}
+.navbar-toggler {
+    border: 0 !important;
+}.intro {   
+    position: relative;
+    background-image: url('../images/sahand-hoseini-jVojxJGIyFE-unsplash.jpg'); /* Update the path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Optional: Adds padding around the content */
+    }
+.checkpoint-header{
+    margin-bottom: 0.5em;
+    color: white;
+}
+.timeline{
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+.checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    
+}
+.checkpoint div{
+    border: 2px solid white;
+    border-radius: 1em;
+    padding: 1.5em;
+    background-color: black;
+    box-shadow: 2px 2px 10px white;
+    transition: all 0.3s ease-in-out;
+}
+.checkpoint p{
+    line-height: 24px;
+    color: #ccc;
+}
+.checkpoint:nth-child(even){
+    border-left: 3px solid #d2af24;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+ .checkpoint:nth-child(odd){
+    border-right: 3px solid #d2af24;
+    padding-right: 3em;
+    transform: translateX(-16.85em);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before{
+    content: '';
+    background: #d2af24;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd)::before{
+    right: 0;
+}
+.checkpoint:nth-child(even)::before{
+    left: 0;
+}
+.checkpoint:nth-child(odd) div:before,
+.checkpoint:nth-child(even) div::before{
+    content: '';
+    background: white;
+    box-shadow: 0 0 0.5em blue;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.checkpoint:nth-child(even) div:before{
+    left: -0.5em;
+}
+.checkpoint:nth-child(odd) div:before{
+    right: -0.5em;
+}
+@media screen and (max-width:1150px){
+    .timeline{
+        width: 80vw;
+    }
+    .timeline .checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-100%);
+    }
+    .timeline .checkpoint div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: #e74c3c;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+.text-link{
+    position: relative;
+    text-decoration: none;
+  }
+.text-link::after{
+  content: '';
+  opacity: 0;
+  transition: all 0.2s;
+  height: 2px;
+  width: 100%;
+  background-color: wheat;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.text-link:hover::after{
+  opacity: 1;
+}
+
+.user-img{
+    width: 150px;
+    height: 160px;
+    margin-top: -100px;
+    border-radius: 50%;
+    border: 5px solid #1c1c3b;
+}
+.user-img:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+.skill-img{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+.tools img{
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+}
+.project-list{
+    box-shadow: 1px 1px 1px 1px black;
+    transition: all 1.2s ease-in-out;
+}
+.project-list:hover{
+    transform: scale(1.05);
+}
+.btn{
+    background-color: #010109;
+    color: white;
+}
+.btn-send{
+    background-color: blue;
+}
+.btn-warning{
+    background-color: #d2af24 !important;
+    color: black;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+        
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.slide-in {
+    animation: slideInLeft 1.2s ease-out forwards;
+}
+.slide-down {
+    animation: slideInTop 1s ease-out forwards;
+    z-index: -1;
+}
+.slide-top {
+    animation: slideInBottom 0.9s ease-out forwards;
+    z-index: -1;
+}
+.hidden {
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    pointer-events: none;
+}
+.content-header-card{
+    z-index: 1;
+}
+.file {
+    color: #000011;
+}
